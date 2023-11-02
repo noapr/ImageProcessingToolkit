@@ -15,5 +15,5 @@ def is_valid_image(filepath):
         img = Image.open(filepath)
         img.close()
         return True
-    except Exception as e:
+    except Exception:
         return False
