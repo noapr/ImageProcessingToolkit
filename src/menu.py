@@ -1,7 +1,8 @@
 import os
+from src.grayscale_conversion import convert_to_grayscale
 
 DICT_MENU = {1: {"name": "Grayscale Conversion",
-                 "function": None,
+                 "function": convert_to_grayscale,
                  "file_name": "gray"},
              2: {"name": "Blurring",
                  "function": None,

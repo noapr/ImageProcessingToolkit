@@ -1,4 +1,5 @@
 from PIL import Image
+from src.menu import DICT_MENU
 
 
 def get_photo_from_user():
@@ -15,5 +16,16 @@ def is_valid_image(filepath):
         img = Image.open(filepath)
         img.close()
         return True
+    except Exception as e:
+        print(e)
+        return False
+
+
+def is_valid_choice(user_choice):
+    try:
+        num = int(user_choice)
+        if num in DICT_MENU.keys():
+            return True
+        return False
     except Exception:
         return False
