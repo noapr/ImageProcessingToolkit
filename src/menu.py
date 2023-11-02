@@ -1,15 +1,23 @@
+import os
+
 DICT_MENU = {1: {"name": "Grayscale Conversion",
-                 "function": None},
+                 "function": None,
+                 "file_name": "gray"},
              2: {"name": "Blurring",
-                 "function": None},
+                 "function": None,
+                 "file_name": "blur"},
              3: {"name": "Sharpening",
-                 "function": None},
+                 "function": None,
+                 "file_name": "sharp"},
              4: {"name": "Edge Detection",
-                 "function": None},
+                 "function": None,
+                 "file_name": "?"},
              5: {"name": "Color Manipulation",
-                 "function": None},
+                 "function": None,
+                 "file_name": "color_manipulation"},
              6: {"name": "Colorize Black and White Photos",
-                 "function": None}}
+                 "function": None,
+                 "file_name": "colored"}}
 
 
 def print_menu():
@@ -19,4 +27,12 @@ def print_menu():
 
 
 def apply_user_choice(user_choice, image_path):
-    result = DICT_MENU[user_choice]["function"](image_path)
+    output_image_path = get_output_image_file_path(user_choice, image_path)
+    result = DICT_MENU[user_choice]["function"](image_path, output_image_path)
+
+
+def get_output_image_file_path(user_choice, image_path):
+    image_file_name = os.path.basename(image_path).split('.')
+    output_image_file_name = image_file_name[0] + "_" + DICT_MENU[user_choice]["file_name"] + "." + image_file_name[1]
+    directory = os.path.dirname(image_path)
+    return directory + "/" + output_image_file_name
