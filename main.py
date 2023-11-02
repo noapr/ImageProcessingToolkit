@@ -11,6 +11,9 @@ if __name__ == '__main__':
         if is_valid_choice(user_choice):
             user_choice = int(user_choice)
             result = apply_user_choice(user_choice, image_path)
-            print("A new image was created next to the image you chose to edit.")
+            if result:
+                print("A new image was created next to the image you chose to edit.")
+            else:
+                print("The request could not be executed")
         else:
             print("You have selected an invalid character.")

@@ -10,3 +10,4 @@ def convert_to_grayscale(input_image_path, output_image_path):
     r, g, b = img[:, :, 0], img[:, :, 1], img[:, :, 2]
     gray_img = (WEIGHT_RED * r + WEIGHT_GREEN * g + WEIGHT_BLUE * b)
     cv2.imwrite(output_image_path, gray_img)
+    return True
