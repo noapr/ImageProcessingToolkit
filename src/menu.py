@@ -1,11 +1,12 @@
 import os
 from src.grayscale_conversion import convert_to_grayscale
+from src.blurring import apply_blur
 
 DICT_MENU = {1: {"name": "Grayscale Conversion",
                  "function": convert_to_grayscale,
                  "file_name": "gray"},
              2: {"name": "Blurring",
-                 "function": None,
+                 "function": apply_blur,
                  "file_name": "blur"},
              3: {"name": "Sharpening",
                  "function": None,
@@ -30,6 +31,7 @@ def print_menu():
 def apply_user_choice(user_choice, image_path):
     output_image_path = get_output_image_file_path(user_choice, image_path)
     result = DICT_MENU[user_choice]["function"](image_path, output_image_path)
+    return result
 
 
 def get_output_image_file_path(user_choice, image_path):
