@@ -3,6 +3,7 @@ from src.grayscale_conversion import convert_to_grayscale
 from src.blurring import apply_blur
 from src.sharpening import apply_sharpening
 from src.edge_detection import apply_edge_detection
+from src.color_manipulation import adjust_color_balance
 
 DICT_MENU = {1: {"name": "Grayscale Conversion",
                  "function": convert_to_grayscale,
@@ -17,7 +18,7 @@ DICT_MENU = {1: {"name": "Grayscale Conversion",
                  "function": apply_edge_detection,
                  "file_name": "edge_detection"},
              5: {"name": "Color Manipulation",
-                 "function": None,
+                 "function": adjust_color_balance,
                  "file_name": "color_manipulation"},
              6: {"name": "Colorize Black and White Photos",
                  "function": None,
