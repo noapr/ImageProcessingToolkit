@@ -1,7 +1,7 @@
 import cv2
 import numpy as np
 
-KERNEL_RANGE = [2, 20]
+KERNEL_RANGE = [1, 100]
 
 
 def apply_blur(input_image_path, output_image_path):
