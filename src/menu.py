@@ -18,7 +18,7 @@ DICT_MENU = {1: {"name": "Grayscale Conversion",
                  "file_name": "color_manipulation"},
              6: {"name": "Colorize Black and White Photos",
                  "function": None,
-                 "file_name": "colored"}}
+                 "file_name": "color"}}
 
 
 def print_menu():
