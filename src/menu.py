@@ -1,6 +1,7 @@
 import os
 from src.grayscale_conversion import convert_to_grayscale
 from src.blurring import apply_blur
+from src.sharpening import apply_sharpening
 
 DICT_MENU = {1: {"name": "Grayscale Conversion",
                  "function": convert_to_grayscale,
@@ -9,7 +10,7 @@ DICT_MENU = {1: {"name": "Grayscale Conversion",
                  "function": apply_blur,
                  "file_name": "blur"},
              3: {"name": "Sharpening",
-                 "function": None,
+                 "function": apply_sharpening,
                  "file_name": "sharp"},
              4: {"name": "Edge Detection",
                  "function": None,
