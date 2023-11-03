@@ -1,4 +1,5 @@
 import os
+
 from src.grayscale_conversion import convert_to_grayscale
 from src.blurring import apply_blur
 from src.sharpening import apply_sharpening
@@ -19,10 +20,7 @@ DICT_MENU = {1: {"name": "Grayscale Conversion",
                  "file_name": "edge_detection"},
              5: {"name": "Color Manipulation",
                  "function": adjust_color_balance,
-                 "file_name": "color_manipulation"},
-             6: {"name": "Colorize Black and White Photos",
-                 "function": None,
-                 "file_name": "color"}}
+                 "file_name": "color_manipulation"}}
 
 
 def print_menu():
